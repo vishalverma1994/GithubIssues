@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GithubIssueTracker</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="comments">Comments</string>
+</resources>

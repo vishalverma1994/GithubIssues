@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/githubIssueTrackerFragment">
+
+    <fragment
+        android:id="@+id/githubIssueTrackerFragment"
+        android:name="com.github.issuetracker.ui.fragments.GithubIssueTrackerFragment"
+        android:label="fragment_issue_tracker_dashboard"
+        tools:layout="@layout/fragment_github_issue_tracker">
+
+        <action
+            android:id="@+id/action_myGithubIssuesFragment_to_myGithubIssueDetailFragment"
+            app:destination="@id/githubIssueTrackerDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/githubIssueTrackerDetailFragment"
+        android:name="com.github.issuetracker.ui.fragments.GithubIssueTrackerDetailFragment"
+        android:label="fragment_github_issue_tracker_detail"
+        tools:layout="@layout/fragment_github_issue_tracker">
+        <argument
+            android:name="arg_1"
+            app:argType="long"
+            android:defaultValue="0L"/>
+
+    </fragment>
+
+</navigation>
